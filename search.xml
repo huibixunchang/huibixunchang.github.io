@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Hello World</title>
+    <url>/2020/04/11/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>python笔记</title>
+    <url>/2020/04/11/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<h1 id="python笔记"><a href="#python笔记" class="headerlink" title="python笔记"></a>python笔记</h1><h2 id="一-常用函数用法"><a href="#一-常用函数用法" class="headerlink" title="一. 常用函数用法"></a>一. 常用函数用法</h2><h2 id="二-基本概念"><a href="#二-基本概念" class="headerlink" title="二. 基本概念"></a>二. 基本概念</h2><h2 id="三-方法技巧"><a href="#三-方法技巧" class="headerlink" title="三. 方法技巧"></a>三. 方法技巧</h2><h2 id="四-python算法题"><a href="#四-python算法题" class="headerlink" title="四. python算法题"></a>四. python算法题</h2><ul>
+<li>列表1</li>
+<li>列表2<br>a 子列表1<br>b 子列表2</li>
+<li>列表3</li>
+</ul>
+<hr>
+<p>加虚线</p>
+<p><a href="www.baidu.com">百度</a></p>
+<p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586689011634&di=53929a4a78d89053c469516a1dce3e9d&imgtype=0&src=http%3A%2F%2F05.imgmini.eastday.com%2Fmobile%2F20180614%2F20180614145417_254bb43ce08760f51dbe77178fa39e99_1.jpeg" alt="picture"></p>
+<p><em>字体是斜线的</em></p>
+<p><strong>字体加粗</strong></p>
+<p><code>&lt;html&gt;&lt;\&gt;html</code>  单行代码</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">import numpy</span><br><span class="line">import pandas</span><br></pre></td></tr></table></figure>
+
+<p>引用文章</p>
+<blockquote>
+<p>我的内容是引用</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>python常用函数</tag>
+        <tag>python技巧</tag>
+      </tags>
+  </entry>
+</search>
