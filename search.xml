@@ -19,9 +19,36 @@
 ]]></content>
   </entry>
   <entry>
-    <title>python笔记</title>
-    <url>/2020/04/11/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<h1 id="python笔记"><a href="#python笔记" class="headerlink" title="python笔记"></a>python笔记</h1><h2 id="一-常用函数用法"><a href="#一-常用函数用法" class="headerlink" title="一. 常用函数用法"></a>一. 常用函数用法</h2><h2 id="二-基本概念"><a href="#二-基本概念" class="headerlink" title="二. 基本概念"></a>二. 基本概念</h2><h2 id="三-方法技巧"><a href="#三-方法技巧" class="headerlink" title="三. 方法技巧"></a>三. 方法技巧</h2><h2 id="四-python算法题"><a href="#四-python算法题" class="headerlink" title="四. python算法题"></a>四. python算法题</h2><ul>
+    <title>C++常用函数</title>
+    <url>/2020/04/13/C++%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<h3 id="begin-与end-front-与back"><a href="#begin-与end-front-与back" class="headerlink" title="begin()与end(), front()与back()"></a>begin()与end(), front()与back()</h3><p>begin()函数</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">iterator begin();</span><br><span class="line"> </span><br><span class="line">const_iterator begin();</span><br></pre></td></tr></table></figure>
+<p>返回一个当前vector容器中起始元素的迭代器。</p>
+<p>end()函数</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">iterator end();</span><br><span class="line"> </span><br><span class="line">const_iterator end();</span><br></pre></td></tr></table></figure>
+<p>end()指向的是最后一个元素的下一个位置，所以<code>v.end()-1</code>访问最后一个元素</p>
+<p>front()函数</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">reference front();</span><br><span class="line"> </span><br><span class="line">const_reference front();</span><br></pre></td></tr></table></figure>
+<p>返回当前vector容器中起始元素的引用。</p>
+<p>back()函数</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">reference back();</span><br><span class="line"> </span><br><span class="line">const_reference back();</span><br></pre></td></tr></table></figure>
+<p>返回当前vector容器中末尾元素的引用。</p>
+<h3 id="insert"><a href="#insert" class="headerlink" title="insert()"></a>insert()</h3><p>insert()函数<br>insert() 函数有以下三种用法:<br>1、在指定位置loc前插入值为val的元素,返回指向这个元素的迭代器<br>2、在指定位置loc前插入num个值为val的元素<br>3、在指定位置loc前插入区间[start, end)的所有元素</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">v.insert(v.begin(),8);  &#x2F;&#x2F;在最前面插入新元素。  </span><br><span class="line"></span><br><span class="line">v.insert(v.begin()+2,1);  &#x2F;&#x2F;在迭代器中第二个元素前插入新元素  </span><br><span class="line"></span><br><span class="line">v.insert(v.end(),3);  &#x2F;&#x2F;在向量末尾追加新元素。</span><br></pre></td></tr></table></figure>
+
+
+]]></content>
+      <categories>
+        <category>C++函数，C++</category>
+      </categories>
+      <tags>
+        <tag>c++常用函数</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>markdown技巧</title>
+    <url>/2020/04/11/python%E5%87%BD%E6%95%B0/</url>
+    <content><![CDATA[<ul>
 <li>列表1</li>
 <li>列表2<br>a 子列表1<br>b 子列表2</li>
 <li>列表3</li>
@@ -39,38 +66,13 @@
 <blockquote>
 <p>我的内容是引用</p>
 </blockquote>
+<p>快捷键修改-截屏贴图 <code>ctrl+1</code></p>
 ]]></content>
       <categories>
-        <category>python</category>
+        <category>markdown</category>
       </categories>
       <tags>
-        <tag>python常用函数</tag>
-        <tag>python技巧</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++笔记</title>
-    <url>/2020/04/13/C-%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h3 id="begin-与end-front-与back"><a href="#begin-与end-front-与back" class="headerlink" title="begin()与end(), front()与back()"></a>begin()与end(), front()与back()</h3><p>begin()函数</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">iterator begin();</span><br><span class="line"> </span><br><span class="line">const_iterator begin();</span><br></pre></td></tr></table></figure>
-<p>返回一个当前vector容器中起始元素的迭代器。</p>
-<p>end()函数</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">iterator end();</span><br><span class="line"> </span><br><span class="line">const_iterator end();</span><br></pre></td></tr></table></figure>
-<p>end()指向的是最后一个元素的下一个位置，所以<code>v.end()-1</code>访问最后一个元素</p>
-<p>front()函数</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">reference front();</span><br><span class="line"> </span><br><span class="line">const_reference front();</span><br></pre></td></tr></table></figure>
-<p>返回当前vector容器中起始元素的引用。</p>
-<p>back()函数</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">reference back();</span><br><span class="line"> </span><br><span class="line">const_reference back();</span><br></pre></td></tr></table></figure>
-<p>返回当前vector容器中末尾元素的引用。</p>
-<h3 id="insert"><a href="#insert" class="headerlink" title="insert()"></a>insert()</h3><p>insert()函数<br>insert() 函数有以下三种用法:<br>1、在指定位置loc前插入值为val的元素,返回指向这个元素的迭代器<br>2、在指定位置loc前插入num个值为val的元素<br>3、在指定位置loc前插入区间[start, end)的所有元素</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">v.insert(v.begin(),8);  &#x2F;&#x2F;在最前面插入新元素。  </span><br><span class="line"></span><br><span class="line">v.insert(v.begin()+2,1);  &#x2F;&#x2F;在迭代器中第二个元素前插入新元素  </span><br><span class="line"></span><br><span class="line">v.insert(v.end(),3);  &#x2F;&#x2F;在向量末尾追加新元素。</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>C++</category>
-      </categories>
-      <tags>
-        <tag>c++常用函数</tag>
+        <tag>markdown语法</tag>
       </tags>
   </entry>
 </search>
