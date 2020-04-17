@@ -22,28 +22,34 @@
     var CONFIG = {"hostname":"huibixunchang.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"auto_detect":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Huibixunchang">
-<meta property="og:url" content="http://huibixunchang.com/index.html">
+  <meta name="description" content="selenium 说明：selenium是一款web自动化测试工具  1. 安装pip install selenium&amp;emsp;&amp;emsp;在chrome中是使用需要安装对应的工具chromedriver,下载链接。&amp;emsp;&amp;emsp;在chrome中设置-&gt;关于Chrome查看chrome版本，在chromedriver下载网页中选择对应的chrome版本的工具，版本号前两位（如8">
+<meta property="og:type" content="article">
+<meta property="og:title" content="selenium基本使用">
+<meta property="og:url" content="http://huibixunchang.com/2020/04/17/selenium%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="Huibixunchang">
+<meta property="og:description" content="selenium 说明：selenium是一款web自动化测试工具  1. 安装pip install selenium&amp;emsp;&amp;emsp;在chrome中是使用需要安装对应的工具chromedriver,下载链接。&amp;emsp;&amp;emsp;在chrome中设置-&gt;关于Chrome查看chrome版本，在chromedriver下载网页中选择对应的chrome版本的工具，版本号前两位（如8">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-04-17T08:54:33.000Z">
+<meta property="article:modified_time" content="2020-04-17T12:38:07.888Z">
 <meta property="article:author" content="Zhaohui Li">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="python爬虫">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://huibixunchang.com/">
+<link rel="canonical" href="http://huibixunchang.com/2020/04/17/selenium%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>Huibixunchang</title>
+  <title>selenium基本使用 | Huibixunchang</title>
   
 
 
@@ -180,9 +186,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -198,10 +205,9 @@
       <meta itemprop="name" content="Huibixunchang">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/17/selenium%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" class="post-title-link" itemprop="url">selenium基本使用</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          selenium基本使用
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -224,6 +230,13 @@
             </span>
 
           
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
 
         </div>
       </header>
@@ -234,7 +247,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="selenium"><a href="#selenium" class="headerlink" title="selenium"></a>selenium</h1><ul>
+        <h1 id="selenium"><a href="#selenium" class="headerlink" title="selenium"></a>selenium</h1><ul>
 <li>说明：selenium是一款web自动化测试工具</li>
 </ul>
 <h3 id="1-安装"><a href="#1-安装" class="headerlink" title="1. 安装"></a>1. 安装</h3><p><code>pip install selenium</code><br>&emsp;&emsp;在chrome中是使用需要安装对应的工具chromedriver,<a href="http://npm.taobao.org/mirrors/chromedriver/" target="_blank" rel="noopener">下载链接</a>。<br>&emsp;&emsp;在chrome中<code>设置</code>-&gt;<code>关于Chrome</code>查看chrome版本，在chromedriver下载网页中选择对应的chrome版本的工具，版本号前两位（如<code>80.0.****.**</code> ）匹配即可。</p>
@@ -339,270 +352,34 @@ driver<span class="token punctuation">.</span>switch_to<span class="token punctu
 <p><a href="https://www.bilibili.com/video/BV1WJ411V7Zt?t=3" target="_blank" rel="noopener">参考视频</a></p>
 </blockquote>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/python/" rel="tag"># python</a>
+              <a href="/tags/python%E7%88%AC%E8%99%AB/" rel="tag"># python爬虫</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://huibixunchang.com/2020/04/13/C++%E5%87%BD%E6%95%B0/">
+        
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://tse2-mm.cn.bing.net/th?id=OIP.cpgIsFmbOe6KY1SBCQL6fAHaE2&pid=Api&rs=1">
-      <meta itemprop="name" content="Zhaohui Li">
-      <meta itemprop="description" content="">
-    </span>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Huibixunchang">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/13/C++%E5%87%BD%E6%95%B0/" class="post-title-link" itemprop="url">C++常用函数</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-04-13 10:29:26 / 修改时间：22:52:56" itemprop="dateCreated datePublished" datetime="2020-04-13T10:29:26+08:00">2020-04-13</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C-%E5%87%BD%E6%95%B0%EF%BC%8CC/" itemprop="url" rel="index"><span itemprop="name">C++函数，C++</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="begin-与end-front-与back"><a href="#begin-与end-front-与back" class="headerlink" title="begin()与end(), front()与back()"></a>begin()与end(), front()与back()</h3><p>begin()函数</p>
-<pre><code>iterator begin();
-
-const_iterator begin();</code></pre><p>返回一个当前vector容器中起始元素的迭代器。</p>
-<p>end()函数</p>
-<pre><code>iterator end();
-
-const_iterator end();</code></pre><p>end()指向的是最后一个元素的下一个位置，所以<code>v.end()-1</code>访问最后一个元素</p>
-<p>front()函数</p>
-<pre><code>reference front();
-
-const_reference front();</code></pre><p>返回当前vector容器中起始元素的引用。</p>
-<p>back()函数</p>
-<pre><code>reference back();
-
-const_reference back();</code></pre><p>返回当前vector容器中末尾元素的引用。</p>
-<h3 id="insert"><a href="#insert" class="headerlink" title="insert()"></a>insert()</h3><p>insert()函数<br>insert() 函数有以下三种用法:<br>1、在指定位置loc前插入值为val的元素,返回指向这个元素的迭代器<br>2、在指定位置loc前插入num个值为val的元素<br>3、在指定位置loc前插入区间[start, end)的所有元素</p>
-<pre><code>v.insert(v.begin(),8);  //在最前面插入新元素。  
-
-v.insert(v.begin()+2,1);  //在迭代器中第二个元素前插入新元素  
-
-v.insert(v.end(),3);  //在向量末尾追加新元素。</code></pre>
-      
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/04/13/C++%E5%87%BD%E6%95%B0/" rel="prev" title="C++常用函数">
+      <i class="fa fa-chevron-left"></i> C++常用函数
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://huibixunchang.com/2020/04/11/markdo%E6%8A%80%E5%B7%A7/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://tse2-mm.cn.bing.net/th?id=OIP.cpgIsFmbOe6KY1SBCQL6fAHaE2&pid=Api&rs=1">
-      <meta itemprop="name" content="Zhaohui Li">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Huibixunchang">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/11/markdo%E6%8A%80%E5%B7%A7/" class="post-title-link" itemprop="url">markdown技巧</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-04-11 23:22:03" itemprop="dateCreated datePublished" datetime="2020-04-11T23:22:03+08:00">2020-04-11</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-17 20:18:05" itemprop="dateModified" datetime="2020-04-17T20:18:05+08:00">2020-04-17</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/markdown/" itemprop="url" rel="index"><span itemprop="name">markdown</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ul>
-<li>列表1</li>
-<li>列表2<br>a 子列表1<br>b 子列表2</li>
-<li>列表3</li>
-</ul>
-<hr>
-<p>加虚线</p>
-<p><a href="www.baidu.com">百度</a></p>
-<p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586689011634&di=53929a4a78d89053c469516a1dce3e9d&imgtype=0&src=http%3A%2F%2F05.imgmini.eastday.com%2Fmobile%2F20180614%2F20180614145417_254bb43ce08760f51dbe77178fa39e99_1.jpeg" alt="picture"></p>
-<p><em>字体是斜线的</em></p>
-<p><strong>字体加粗</strong></p>
-<p><code>&lt;html&gt;&lt;\&gt;html</code>  单行代码</p>
-<pre><code>    import numpy
-    import pandas</code></pre><p>&nbsp;  //半角空格（英文）<br>&emsp;  //全角空格（中文</p>
-<p>引用文章</p>
-<blockquote>
-<p>我的内容是引用</p>
-</blockquote>
-<p>快捷键修改-截屏贴图 <code>ctrl+1</code></p>
-<pre class=" language-python"><code class="language-python">    <span class="token keyword">import</span> numpy
-    <span class="token keyword">import</span> pandas
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://huibixunchang.com/2020/04/11/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://tse2-mm.cn.bing.net/th?id=OIP.cpgIsFmbOe6KY1SBCQL6fAHaE2&pid=Api&rs=1">
-      <meta itemprop="name" content="Zhaohui Li">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Huibixunchang">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/04/11/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-04-11 14:32:11" itemprop="dateCreated datePublished" datetime="2020-04-11T14:32:11+08:00">2020-04-11</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-bash"><code class="language-bash">$ hexo server</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-bash"><code class="language-bash">$ hexo generate</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-bash"><code class="language-bash">$ hexo deploy</code></pre>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
@@ -655,6 +432,7 @@ v.insert(v.end(),3);  //在向量末尾追加新元素。</code></pre>
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#selenium"><span class="nav-number">1.</span> <span class="nav-text">selenium</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装"><span class="nav-number">1.0.1.</span> <span class="nav-text">1. 安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-基本使用"><span class="nav-number">1.0.2.</span> <span class="nav-text">2. 基本使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-selenium-元素定位方法"><span class="nav-number">1.0.3.</span> <span class="nav-text">3. selenium 元素定位方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-selenium-切换浏览器窗口方法"><span class="nav-number">1.0.4.</span> <span class="nav-text">4. selenium 切换浏览器窗口方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-实现登入功能"><span class="nav-number">1.0.5.</span> <span class="nav-text">5. 实现登入功能</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
