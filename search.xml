@@ -6,25 +6,30 @@
     <content><![CDATA[<h3 id="begin-与end-front-与back"><a href="#begin-与end-front-与back" class="headerlink" title="begin()与end(), front()与back()"></a>begin()与end(), front()与back()</h3><p>begin()函数</p>
 <pre><code>iterator begin();
 
-const_iterator begin();</code></pre><p>返回一个当前vector容器中起始元素的迭代器。</p>
+const_iterator begin();
+</code></pre><p>返回一个当前vector容器中起始元素的迭代器。</p>
 <p>end()函数</p>
 <pre><code>iterator end();
 
-const_iterator end();</code></pre><p>end()指向的是最后一个元素的下一个位置，所以<code>v.end()-1</code>访问最后一个元素</p>
+const_iterator end();
+</code></pre><p>end()指向的是最后一个元素的下一个位置，所以<code>v.end()-1</code>访问最后一个元素</p>
 <p>front()函数</p>
 <pre><code>reference front();
 
-const_reference front();</code></pre><p>返回当前vector容器中起始元素的引用。</p>
+const_reference front();
+</code></pre><p>返回当前vector容器中起始元素的引用。</p>
 <p>back()函数</p>
 <pre><code>reference back();
 
-const_reference back();</code></pre><p>返回当前vector容器中末尾元素的引用。</p>
+const_reference back();
+</code></pre><p>返回当前vector容器中末尾元素的引用。</p>
 <h3 id="insert"><a href="#insert" class="headerlink" title="insert()"></a>insert()</h3><p>insert()函数<br>insert() 函数有以下三种用法:<br>1、在指定位置loc前插入值为val的元素,返回指向这个元素的迭代器<br>2、在指定位置loc前插入num个值为val的元素<br>3、在指定位置loc前插入区间[start, end)的所有元素</p>
 <pre><code>v.insert(v.begin(),8);  //在最前面插入新元素。  
 
 v.insert(v.begin()+2,1);  //在迭代器中第二个元素前插入新元素  
 
-v.insert(v.end(),3);  //在向量末尾追加新元素。</code></pre>]]></content>
+v.insert(v.end(),3);  //在向量末尾追加新元素。
+</code></pre>]]></content>
       <categories>
         <category>C++</category>
       </categories>
@@ -39,13 +44,15 @@ v.insert(v.end(),3);  //在向量末尾追加新元素。</code></pre>]]></conte
 <li><p>创建一个web应用程序<br> <code>app = Falsk(__name__)</code></p>
 </li>
 <li><p>启用程序程序 -&gt; 启动 -&gt; 启动一个flask项目</p>
-<pre class="line-numbers language-python"><code class="language-python"><span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__mian__'</span><span class="token punctuation">:</span>   <span class="token comment" spellcheck="true">#程序入口</span>
- app<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class=" language-lang-python"><code class="language-lang-python">if __name__ == '__mian__':   #程序入口
+ app.run()
+</code></pre>
 </li>
 <li><p>前端页面发送请求，用一个函数来处理浏览器发送过来的请求</p>
-<pre class="line-numbers language-python"><code class="language-python">@app<span class="token punctuation">.</span>route<span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">#当访问到127.0.0.1：5000/</span>
-<span class="token keyword">def</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
- <span class="token keyword">return</span> <span class="token string">"hello world"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class=" language-lang-python"><code class="language-lang-python">@app.route("/")  #当访问到127.0.0.1：5000/
+def func():
+ return "hello world"
+</code></pre>
 </li>
 </ol>
 ]]></content>
@@ -58,6 +65,24 @@ v.insert(v.end(),3);  //在向量末尾追加新元素。</code></pre>]]></conte
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/2020/04/11/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class=" language-lang-bash"><code class="language-lang-bash">$ hexo new "My New Post"
+</code></pre>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class=" language-lang-bash"><code class="language-lang-bash">$ hexo server
+</code></pre>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class=" language-lang-bash"><code class="language-lang-bash">$ hexo generate
+</code></pre>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class=" language-lang-bash"><code class="language-lang-bash">$ hexo deploy
+</code></pre>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>markdown技巧</title>
     <url>/2020/04/11/markdo%E6%8A%80%E5%B7%A7/</url>
     <content><![CDATA[<ul>
@@ -68,22 +93,36 @@ v.insert(v.end(),3);  //在向量末尾追加新元素。</code></pre>]]></conte
 <hr>
 <p>加虚线</p>
 <p><a href="www.baidu.com">百度</a></p>
-<p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586689011634&di=53929a4a78d89053c469516a1dce3e9d&imgtype=0&src=http%3A%2F%2F05.imgmini.eastday.com%2Fmobile%2F20180614%2F20180614145417_254bb43ce08760f51dbe77178fa39e99_1.jpeg" alt="picture"></p>
+<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1586689011634&amp;di=53929a4a78d89053c469516a1dce3e9d&amp;imgtype=0&amp;src=http%3A%2F%2F05.imgmini.eastday.com%2Fmobile%2F20180614%2F20180614145417_254bb43ce08760f51dbe77178fa39e99_1.jpeg" alt="picture"></p>
 <p><em>字体是斜线的</em></p>
 <p><strong>字体加粗</strong></p>
-<p><code>&lt;html&gt;&lt;\&gt;html</code>  单行代码</p>
-<pre class="line-numbers language-python"><code class="language-python">    <span class="token keyword">import</span> numpy
-    <span class="token keyword">import</span> pandas<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><br /> </br>换行</p>
+<p><code>&lt;html&gt;&lt;\&gt;html</code>  <br />单行代码</p>
+<pre class=" language-lang-python"><code class="language-lang-python">    import numpy
+    import pandas
+</code></pre>
+<font color=Red size=4> size=4</font>
+
 <p>&nbsp;  //半角空格（英文）<br>&emsp;  //全角空格（中文</p>
 <p>引用文章</p>
 <blockquote>
 <p>我的内容是引用</p>
 </blockquote>
 <p>快捷键修改-截屏贴图 <code>ctrl+1</code></p>
-<pre class="line-numbers language-python"><code class="language-python">    <span class="token keyword">import</span> numpy
-    <span class="token keyword">import</span> pandas
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-]]></content>
+<pre class=" language-lang-python"><code class="language-lang-python">    import numpy
+    import pandas
+    print()
+</code></pre>
+<blockquote>
+<p><a href="https://www.jianshu.com/p/e74eb43960a1" target="_blank" rel="noopener">Markdown数学公式语法</a></p>
+</blockquote>
+<p>$ 数学公式$  行内 不独占一行</p>
+<script type="math/tex; mode=display">数学公式  行间 独占一行</script><script type="math/tex; mode=display">
+\begin{aligned}
+a &= b + c \\
+  &= d + e + f + g \\
+  &= h + i
+\end{aligned}</script><!-- \end{equation}$$ -->]]></content>
       <categories>
         <category>markdown</category>
       </categories>
@@ -92,49 +131,37 @@ v.insert(v.end(),3);  //在向量末尾追加新元素。</code></pre>]]></conte
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2020/04/11/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo new <span class="token string">"My New Post"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre class="line-numbers language-bash"><code class="language-bash">$ hexo deploy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>JQuery-note</title>
     <url>/2020/04/20/JQuery-note/</url>
     <content><![CDATA[<h1 id="JQuery"><a href="#JQuery" class="headerlink" title="JQuery"></a>JQuery</h1><ul>
 <li>说明： </li>
 </ul>
-<h3 id="1-JQuery安装"><a href="#1-JQuery安装" class="headerlink" title="1. JQuery安装"></a>1. JQuery安装</h3><h3 id="2-基本使用"><a href="#2-基本使用" class="headerlink" title="2. 基本使用"></a>2. 基本使用</h3><pre class="line-numbers language-html"><code class="language-html">//1.导入文件
-&lt;script src = "./jquery.js"><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>   //下载的JQuery文件
-&lt;script src = "JQindex.js"><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>   //自己编写的文件
+<h3 id="1-JQuery安装"><a href="#1-JQuery安装" class="headerlink" title="1. JQuery安装"></a>1. JQuery安装</h3><h3 id="2-基本使用"><a href="#2-基本使用" class="headerlink" title="2. 基本使用"></a>2. 基本使用</h3><pre class=" language-lang-html"><code class="language-lang-html">//1.导入文件
+<script src = "./jquery.js"></script>   //下载的JQuery文件
+<script src = "JQindex.js"></script>   //自己编写的文件
 
 //html文件测试内容
-&lt;div id = "a">
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span>
-        &lt;span id = "nba">nba<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
-        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span><span class="token punctuation">></span></span>cba<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>b<span class="token punctuation">'</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+<div id = "a">
+    <p></p>
+    <p>
+        <span id = "nba">nba</span>
+        <span>cba</span>
+    </p>
+</div>
+<div id='b'></div>
 
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>c<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>a<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>c<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>b<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>c<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>c<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="2-1-click事件"><a href="#2-1-click事件" class="headerlink" title="2.1 click事件"></a>2.1 click事件</h4><pre class="line-numbers language-JavaScript"><code class="language-JavaScript">//$ 是Jquery的标识符，表示使用JQuery
+<div class="c">a</div>
+<div class="c">b</div>
+<div class="c">c</div>
+</code></pre>
+<h4 id="2-1-click事件"><a href="#2-1-click事件" class="headerlink" title="2.1 click事件"></a>2.1 click事件</h4><pre class=" language-lang-JavaScript"><code class="language-lang-JavaScript">//$ 是Jquery的标识符，表示使用JQuery
 $(document).ready(function() {     //function()匿名函数
     $("#nba").click(function(){  //click()事件 参数是一个方法，JS中可以将函数作为参数传递  
         alert(123);   //点击网页上nba,弹出框显示123，表示JQuery使用成功
     });  
-});<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="2-2-JQuery选择器"><a href="#2-2-JQuery选择器" class="headerlink" title="2.2 JQuery选择器"></a>2.2 JQuery选择器</h4><pre class="line-numbers language-JavaScript"><code class="language-JavaScript">//Jquery选择器-->选择html文件中的内容
+});
+</code></pre>
+<h4 id="2-2-JQuery选择器"><a href="#2-2-JQuery选择器" class="headerlink" title="2.2 JQuery选择器"></a>2.2 JQuery选择器</h4><pre class=" language-lang-JavaScript"><code class="language-lang-JavaScript">//Jquery选择器-->选择html文件中的内容
 $(document).ready(function(){
     // alert($("#a").html());
 
@@ -143,8 +170,9 @@ $(document).ready(function(){
     // alert($("div#a p:eq(0)").html());
 
     alert($("#a p:eq(1) span:eq(1)").html());  //cba | 选择a标签，再选择第二个p标签，再选择第二个span标签里的内容，为cba
-});<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="2-3-hover事件"><a href="#2-3-hover事件" class="headerlink" title="2.3 hover事件"></a>2.3 hover事件</h4><pre class="line-numbers language-JavaScript"><code class="language-JavaScript">//hover事件   html文件中<span id = "nba">nba</span>
+});
+</code></pre>
+<h4 id="2-3-hover事件"><a href="#2-3-hover事件" class="headerlink" title="2.3 hover事件"></a>2.3 hover事件</h4><pre class=" language-lang-JavaScript"><code class="language-lang-JavaScript">//hover事件   html文件中<span id = "nba">nba</span>
 $(document).ready(function(){
     $("#nba").hover(function() {   //hover()事件中有两个参数，这里有两个function()作为参数
         $(this).html("Kobe")       //this指向上面的"nba"，当鼠标滑到nba上面时显示"Kobe"
@@ -152,13 +180,15 @@ $(document).ready(function(){
     function() {
         $(this).html("Lebron")     //this指向上面的"nba"，当鼠标离开nba字符串时显示"Lebron"
     });
-});<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="2-4-submit提交事件"><a href="#2-4-submit提交事件" class="headerlink" title="2.4 submit提交事件"></a>2.4 submit提交事件</h4><pre class="line-numbers language-html"><code class="language-html"><span class="token comment" spellcheck="true">&lt;!-- form表单 --></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>form</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>f<span class="token punctuation">"</span></span> <span class="token attr-name">action</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://www.baidu.com<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text<span class="token punctuation">"</span></span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>name<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>submit<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>提交<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>form</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-JavaScript"><code class="language-JavaScript">$(document).ready(function() {
+});
+</code></pre>
+<h4 id="2-4-submit提交事件"><a href="#2-4-submit提交事件" class="headerlink" title="2.4 submit提交事件"></a>2.4 submit提交事件</h4><pre class=" language-lang-html"><code class="language-lang-html"><!-- form表单 -->
+<form id="f" action="https://www.baidu.com">
+    <input type="text" name="" id="name">
+    <input type="submit" value="提交">
+</form>
+</code></pre>
+<pre class=" language-lang-JavaScript"><code class="language-lang-JavaScript">$(document).ready(function() {
     $("#f").submit(function() {  
         if ($("#name").val() == "baidu") {  //文本输入框中输入字符串，若为baidu,则显示yes baidu,继续点击可跳转到百度首页
             alert("yes baidu")
@@ -167,12 +197,14 @@ $(document).ready(function(){
             return false;
         }
     });
-});<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h4 id="2-5-显示与隐藏"><a href="#2-5-显示与隐藏" class="headerlink" title="2.5 显示与隐藏"></a>2.5 显示与隐藏</h4><pre class="line-numbers language-html"><code class="language-html">&lt;p id = 'aa'>abc<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>t<span class="token punctuation">'</span></span><span class="token punctuation">></span></span>toggle<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>s<span class="token punctuation">'</span></span><span class="token punctuation">></span></span>show<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">'</span>h<span class="token punctuation">'</span></span><span class="token punctuation">></span></span>hide<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-JavaScript"><code class="language-JavaScript">$(document).ready(function() {
+});
+</code></pre>
+<h4 id="2-5-显示与隐藏"><a href="#2-5-显示与隐藏" class="headerlink" title="2.5 显示与隐藏"></a>2.5 显示与隐藏</h4><pre class=" language-lang-html"><code class="language-lang-html"><p id = 'aa'>abc</p>
+<button id='t'>toggle</button>
+<button id='s'>show</button>
+<button id='h'>hide</button>
+</code></pre>
+<pre class=" language-lang-JavaScript"><code class="language-lang-JavaScript">$(document).ready(function() {
     $("#h").click(function() { 
         $("#aa").hide(3000, function() {   //3s钟关闭后，去触发show方法
             $("#s").click()  
@@ -186,7 +218,8 @@ $(document).ready(function(){
     $("#t").click(function() {
         $("#aa").toggle()
     });
-});<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+});
+</code></pre>
 <blockquote>
 <p><a href="https://www.bilibili.com/video/BV1eb411n7Lw?p=6" target="_blank" rel="noopener">参考视频</a></p>
 </blockquote>
@@ -209,100 +242,104 @@ $(document).ready(function(){
 <ul>
 <li>注意事项：chromedriver驱动文件<code>chromedriver.exe</code>应与编写的文件放在同一目录中，或者将chromedriver添加至系统环境变量中。</li>
 </ul>
-<h3 id="2-基本使用"><a href="#2-基本使用" class="headerlink" title="2. 基本使用"></a>2. 基本使用</h3><pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 1.导包</span>
-<span class="token keyword">from</span> selenium <span class="token keyword">import</span> webdriver
-<span class="token keyword">import</span> time
+<h3 id="2-基本使用"><a href="#2-基本使用" class="headerlink" title="2. 基本使用"></a>2. 基本使用</h3><pre class=" language-lang-python"><code class="language-lang-python"># 1.导包
+from selenium import webdriver
+import time
 
-<span class="token comment" spellcheck="true"># 2. 请求页面</span>
-driver<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'https://www.baidu.com'</span><span class="token punctuation">)</span>
+# 2. 请求页面
+driver.get('https://www.baidu.com')
 
-<span class="token comment" spellcheck="true"># 3. 页面的基本操作（点击，输入）</span>
-driver<span class="token punctuation">.</span>find_element_by_id<span class="token punctuation">(</span><span class="token string">'kw'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>send_keys<span class="token punctuation">(</span><span class="token string">'nba'</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 实现输入</span>
-driver<span class="token punctuation">.</span>find_element_by_id<span class="token punctuation">(</span><span class="token string">'su'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 实现点击</span>
+# 3. 页面的基本操作（点击，输入）
+driver.find_element_by_id('kw').send_keys('nba')  # 实现输入
+driver.find_element_by_id('su').click()  # 实现点击
 
-time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 延时2s</span>
-<span class="token comment" spellcheck="true"># driver.save_screenshot('baidu.png')</span>
+time.sleep(2)  # 延时2s
+# driver.save_screenshot('baidu.png')
 
-<span class="token keyword">print</span><span class="token punctuation">(</span>driver<span class="token punctuation">.</span>page_source<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 获取页面渲染之后的数据</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>driver<span class="token punctuation">.</span>get_cookie<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 查看页面cookie值</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>driver<span class="token punctuation">.</span>current_url<span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 查看当前url路径</span>
+print(driver.page_source)  # 获取页面渲染之后的数据
+print(driver.get_cookie())  # 查看页面cookie值
+print(driver.current_url)  # 查看当前url路径
 
-<span class="token comment" spellcheck="true"># 4. 无界面运行</span>
-<span class="token keyword">from</span> selenium<span class="token punctuation">.</span>webdriver <span class="token keyword">import</span> Chrome<span class="token punctuation">,</span>ChromeOptions
-option <span class="token operator">=</span> ChromeOptions<span class="token punctuation">(</span><span class="token punctuation">)</span>
-option<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span><span class="token string">"--headless"</span><span class="token punctuation">)</span>
+# 4. 无界面运行
+from selenium.webdriver import Chrome,ChromeOptions
+option = ChromeOptions()
+option.add_argument("--headless")
 
-driver <span class="token operator">=</span> Chrome<span class="token punctuation">(</span>options<span class="token operator">=</span>option<span class="token punctuation">)</span>
-driver<span class="token punctuation">.</span>get<span class="token punctuation">(</span>url<span class="token punctuation">)</span>
+driver = Chrome(options=option)
+driver.get(url)
 
-driver<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 关闭页面</span>
-driver<span class="token punctuation">.</span>quit<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 关闭浏览器</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="3-selenium-元素定位方法"><a href="#3-selenium-元素定位方法" class="headerlink" title="3. selenium 元素定位方法"></a>3. selenium 元素定位方法</h3><pre class="line-numbers language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 请求豆瓣页面</span>
-driver<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'https://www.douban.com/'</span><span class="token punctuation">)</span>
+driver.close()  # 关闭页面
+driver.quit()  # 关闭浏览器
+</code></pre>
+<h3 id="3-selenium-元素定位方法"><a href="#3-selenium-元素定位方法" class="headerlink" title="3. selenium 元素定位方法"></a>3. selenium 元素定位方法</h3><pre class=" language-lang-python"><code class="language-lang-python"># 请求豆瓣页面
+driver.get('https://www.douban.com/')
 
-<span class="token comment" spellcheck="true"># 3.1 通过标签的ID值获取标签</span>
-ret1 <span class="token operator">=</span> driver<span class="token punctuation">.</span>find_element_by_id<span class="token punctuation">(</span><span class="token string">'anony-nav'</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 获取对象   #anony-nav-link-div标签</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>ret1<span class="token punctuation">)</span>
+# 3.1 通过标签的ID值获取标签
+ret1 = driver.find_element_by_id('anony-nav')  # 获取对象   #anony-nav-link-div标签
+print(ret1)
 
-<span class="token comment" spellcheck="true"># 3.2 通过标签的ID值获取多个标签</span>
-ret2 <span class="token operator">=</span> driver<span class="token punctuation">.</span>find_elements_by_id<span class="token punctuation">(</span><span class="token string">'anony-nav'</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 获取多个标签 --list行式存在</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>ret2<span class="token punctuation">)</span>
+# 3.2 通过标签的ID值获取多个标签
+ret2 = driver.find_elements_by_id('anony-nav')  # 获取多个标签 --list行式存在
+print(ret2)
 
-<span class="token comment" spellcheck="true"># 3.3 通过标签的class属性值获取标签</span>
-ret3 <span class="token operator">=</span> driver<span class="token punctuation">.</span>find_elements_by_class_name<span class="token punctuation">(</span><span class="token string">'anony-nav-links'</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>ret3<span class="token punctuation">)</span>
+# 3.3 通过标签的class属性值获取标签
+ret3 = driver.find_elements_by_class_name('anony-nav-links')
+print(ret3)
 
-<span class="token comment" spellcheck="true"># 3.4 通过xpath获取左上角豆瓣图片的&lt;a>标签</span>
-ret4 <span class="token operator">=</span> driver<span class="token punctuation">.</span>find_elements_by_xpath<span class="token punctuation">(</span><span class="token string">'//*[@id="anony-nav"]/h1/a'</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>ret4<span class="token punctuation">)</span>
+# 3.4 通过xpath获取左上角豆瓣图片的<a>标签
+ret4 = driver.find_elements_by_xpath('//*[@id="anony-nav"]/h1/a')
+print(ret4)
 
-<span class="token comment" spellcheck="true"># 3.5 通过标签包裹的文本‘下载豆瓣 App’获取元素列表(精确定位)</span>
-ret5 <span class="token operator">=</span> driver<span class="token punctuation">.</span>find_element_by_link_text<span class="token punctuation">(</span><span class="token string">'下载豆瓣 App'</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>ret5<span class="token punctuation">)</span>
+# 3.5 通过标签包裹的文本‘下载豆瓣 App’获取元素列表(精确定位)
+ret5 = driver.find_element_by_link_text('下载豆瓣 App')
+print(ret5)
 
-<span class="token comment" spellcheck="true"># 3.6 通过标签包裹的文本“豆瓣”，获取元素的列表（模糊定位）</span>
-ret6 <span class="token operator">=</span> driver<span class="token punctuation">.</span>find_elements_by_partial_link_text<span class="token punctuation">(</span><span class="token string">'豆瓣'</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>len<span class="token punctuation">(</span>ret6<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 25个，网页中有37个。  “豆瓣”文本有的可能不是包裹标签下</span>
+# 3.6 通过标签包裹的文本“豆瓣”，获取元素的列表（模糊定位）
+ret6 = driver.find_elements_by_partial_link_text('豆瓣')
+print(len(ret6))  # 25个，网页中有37个。  “豆瓣”文本有的可能不是包裹标签下
 
-<span class="token comment" spellcheck="true"># 3.7 通过标签名获取元素列表</span>
-ret7 <span class="token operator">=</span> driver<span class="token punctuation">.</span>find_elements_by_tag_name<span class="token punctuation">(</span><span class="token string">'div'</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>len<span class="token punctuation">(</span>ret7<span class="token punctuation">)</span><span class="token punctuation">)</span>
+# 3.7 通过标签名获取元素列表
+ret7 = driver.find_elements_by_tag_name('div')
+print(len(ret7))
 
-<span class="token comment" spellcheck="true"># 3.8 通过&lt;h1>标签包裹的文本内容</span>
-ret8 <span class="token operator">=</span> driver<span class="token punctuation">.</span>find_element_by_tag_name<span class="token punctuation">(</span><span class="token string">'h1'</span><span class="token punctuation">)</span>   <span class="token comment" spellcheck="true">#定位到h1标签</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>ret8<span class="token punctuation">.</span>text<span class="token punctuation">)</span>
+# 3.8 通过<h1>标签包裹的文本内容
+ret8 = driver.find_element_by_tag_name('h1')   #定位到h1标签
+print(ret8.text)
 
-<span class="token comment" spellcheck="true"># 3.9 通过标签包裹的文本‘下载豆瓣 App’获取其href属性值</span>
-ret9 <span class="token operator">=</span> driver<span class="token punctuation">.</span>find_element_by_link_text<span class="token punctuation">(</span><span class="token string">'下载豆瓣 App'</span><span class="token punctuation">)</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>ret9<span class="token punctuation">.</span>get_attribute<span class="token punctuation">(</span><span class="token string">'href'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="4-selenium-切换浏览器窗口方法"><a href="#4-selenium-切换浏览器窗口方法" class="headerlink" title="4. selenium 切换浏览器窗口方法"></a>4. selenium 切换浏览器窗口方法</h3><pre class="line-numbers language-python"><code class="language-python">driver<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'https://www.douban.com/'</span><span class="token punctuation">)</span>
+# 3.9 通过标签包裹的文本‘下载豆瓣 App’获取其href属性值
+ret9 = driver.find_element_by_link_text('下载豆瓣 App')
+print(ret9.get_attribute('href'))
+</code></pre>
+<h3 id="4-selenium-切换浏览器窗口方法"><a href="#4-selenium-切换浏览器窗口方法" class="headerlink" title="4. selenium 切换浏览器窗口方法"></a>4. selenium 切换浏览器窗口方法</h3><pre class=" language-lang-python"><code class="language-lang-python">driver.get('https://www.douban.com/')
 
-driver<span class="token punctuation">.</span>find_element_by_xpath<span class="token punctuation">(</span><span class="token string">'//*[@id="anony-nav"]/div[1]/ul/li[2]/a'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+driver.find_element_by_xpath('//*[@id="anony-nav"]/div[1]/ul/li[2]/a').click()
 
-<span class="token comment" spellcheck="true"># 4.1 获取当前所有的窗口</span>
-current_window <span class="token operator">=</span> driver<span class="token punctuation">.</span>window_handles  <span class="token comment" spellcheck="true">#--list</span>
-<span class="token keyword">print</span><span class="token punctuation">(</span>current_window<span class="token punctuation">)</span>
+# 4.1 获取当前所有的窗口
+current_window = driver.window_handles  #--list
+print(current_window)
 
-<span class="token comment" spellcheck="true"># 4.2 根据窗口的索引值切换到对应窗口</span>
-driver<span class="token punctuation">.</span>switch_to<span class="token punctuation">.</span>window<span class="token punctuation">(</span>current_window<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+# 4.2 根据窗口的索引值切换到对应窗口
+driver.switch_to.window(current_window[1])
 
-<span class="token comment" spellcheck="true"># switch方法实现页面的额前进后退</span>
-driver<span class="token punctuation">.</span>find_element_by_xpath<span class="token punctuation">(</span><span class="token string">'//*[@id="anony-sns"]/div/div[3]/div/div[1]/ul/li[3]/div/a/img'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
-driver<span class="token punctuation">.</span>back<span class="token punctuation">(</span><span class="token punctuation">)</span>
-driver<span class="token punctuation">.</span>forward<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="5-实现登入功能"><a href="#5-实现登入功能" class="headerlink" title="5. 实现登入功能"></a>5. 实现登入功能</h3><pre class="line-numbers language-python"><code class="language-python">driver<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'https://www.douban.com/'</span><span class="token punctuation">)</span>
-<span class="token comment" spellcheck="true"># switch_to进入嵌套网页</span>
-driver<span class="token punctuation">.</span>switch_to_frame<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true"># 需要点击内置的密码登入</span>
+# switch方法实现页面的额前进后退
+driver.find_element_by_xpath('//*[@id="anony-sns"]/div/div[3]/div/div[1]/ul/li[3]/div/a/img').click()
+driver.back()
+driver.forward()
+</code></pre>
+<h3 id="5-实现登入功能"><a href="#5-实现登入功能" class="headerlink" title="5. 实现登入功能"></a>5. 实现登入功能</h3><pre class=" language-lang-python"><code class="language-lang-python">driver.get('https://www.douban.com/')
+# switch_to进入嵌套网页
+driver.switch_to_frame(0)  # 需要点击内置的密码登入
 
-driver<span class="token punctuation">.</span>find_element_by_xpath<span class="token punctuation">(</span><span class="token string">'/html/body/div[1]/div[1]/ul[1]/li[2]'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
-driver<span class="token punctuation">.</span>find_element_by_xpath<span class="token punctuation">(</span><span class="token string">'//*[@id="username"]'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>send_keys<span class="token punctuation">(</span><span class="token string">'123456'</span><span class="token punctuation">)</span>
-time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
-driver<span class="token punctuation">.</span>find_element_by_xpath<span class="token punctuation">(</span><span class="token string">'//*[@id="password"]'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>send_keys<span class="token punctuation">(</span><span class="token string">'1234'</span><span class="token punctuation">)</span>
-time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>
-driver<span class="token punctuation">.</span>find_element_by_xpath<span class="token punctuation">(</span><span class="token string">'/html/body/div[1]/div[2]/div[1]/div[5]/a'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>click<span class="token punctuation">(</span><span class="token punctuation">)</span>
+driver.find_element_by_xpath('/html/body/div[1]/div[1]/ul[1]/li[2]').click()
+driver.find_element_by_xpath('//*[@id="username"]').send_keys('123456')
+time.sleep(2)
+driver.find_element_by_xpath('//*[@id="password"]').send_keys('1234')
+time.sleep(2)
+driver.find_element_by_xpath('/html/body/div[1]/div[2]/div[1]/div[5]/a').click()
 
-<span class="token comment" spellcheck="true"># 处理弹框</span>
-driver<span class="token punctuation">.</span>switch_to<span class="token punctuation">.</span>frame<span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+# 处理弹框
+driver.switch_to.frame()
+</code></pre>
 <blockquote>
 <p><a href="https://www.bilibili.com/video/BV1WJ411V7Zt?t=3" target="_blank" rel="noopener">参考视频</a></p>
 </blockquote>
@@ -314,6 +351,52 @@ driver<span class="token punctuation">.</span>switch_to<span class="token punctu
         <tag>python</tag>
         <tag>python爬虫</tag>
         <tag>selenium</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>对称矩阵及SVD分解</title>
+    <url>/2020/04/24/%E5%AF%B9%E7%A7%B0%E7%9F%A9%E9%98%B5%E5%8F%8ASVD%E5%88%86%E8%A7%A3/</url>
+    <content><![CDATA[<h4 id="矩阵相似型"><a href="#矩阵相似型" class="headerlink" title="矩阵相似型"></a>矩阵相似型</h4><p>&emsp; &emsp; 如果矩阵A,B满足$A=P^{-1}BP$则称A和B相似。A和B的特征方程相同，特征值相同。&emsp; (类比相似三角形，矩阵的相似也是<font color=#FA8072>从不同的视角观察相同的内容。</font>)</p>
+<font color=#D2B48C size=2>假设P是一个坐标系，则A变换是在P坐标系下观察的B的变换（观察B变换在我们标准坐标系下，观察A变换在P坐标系下,A和B本质是同一变换，只是观察的坐标系不同）</font>
+
+
+
+
+
+<h4 id="1-对称矩阵"><a href="#1-对称矩阵" class="headerlink" title="1. 对称矩阵"></a>1. 对称矩阵</h4><p>&emsp; &emsp; <strong>(一) 对称矩阵的所有不同的特征值对应的特征向量互相垂直。</strong><br>&emsp;&emsp;假设矩阵A的两个特征向量$v_1,v_2$对应不同的特征值$\lambda_1, \lambda_2。$<br><br />证明<font color=Red> $ \qquad \vec{v_1} \cdot \vec{v_2} = 0 $ </font>  &emsp;&emsp;<font size=2>(向量之间的点乘，对应的因子相乘再相加)</font></p>
+<script type="math/tex; mode=display">\begin{aligned}
+(\lambda_1\vec{v_1})\cdot\vec{v_2} &= (\lambda_1\vec{v_1})^T\vec{v_2}=(Av_1)^T\vec{v_2}=v_1^TA^Tv_2=v_1^TAv_2 
+\\ &=v_1^T \lambda_2v_2=\lambda_2v_1^Tv_2=\lambda_2\vec{v_1}\vec{v_2}
+\end{aligned}</script><script type="math/tex; mode=display">(\lambda_1-\lambda_2)(\vec{v_1}\cdot\vec{v_2})=0</script><script type="math/tex; mode=display">\qquad \vec{v_1} \cdot \vec{v_2} = 0</script><h5 id="1-1-正交对角化"><a href="#1-1-正交对角化" class="headerlink" title="1.1 正交对角化"></a>1.1 正交对角化</h5><p>&emsp; &emsp;<strong>(二)对称矩阵一定可以被对角化 $\qquad A=PDP^{-1}$</strong><br>如果A是对称矩阵 $\qquad A=QDQ^{-1}$ &emsp;将每一个特征向量标准化 $\qquad A=QDQ^{T}$ &emsp;故进行了正交对角化</p>
+<font  color=Blue size=2>(标准正交矩阵的逆等于标准正交矩阵的转置)</font>
+&emsp; &emsp;A是对称矩阵 <---> A可以被正交对角化$\qquad A=QDQ^{T}$
+
+#### 2. 奇异值(Singular Value)
+若A是一个$m\ast n$的矩阵，则$ A^TA$是一个$n\ast n$的方针，且对称。<br />
+$A^TA$ 可以被正交对角化，拥有n个实数特征值$(\lambda_1,\lambda_2,...,\lambda_n)$；n个互相垂直的标准特征向量$(\vec{v_1},\vec{v_2},...,\vec{v_n})$。
+
+$${||A\vec{v_i}||}^2=(A\vec{v_i})\cdot(A\vec{v_i})={(A\vec{v_i})}^T\cdot(A\vec{v_i})={v_i}^TA^TAv_i$$
+$$={v_i}^T(A^TAv_i) ={v_i}^T(\lambda_i v_i) $$
+$$= \lambda_i {v_i}^Tv_i = \lambda_i{||\vec{v_i} ||}^2 = \lambda_i$$
+$ A^TA$的特征值>=0, 
+$$\sigma_i = \sqrt{\lambda_i}$$ $\sigma_i$称为奇异值，奇异值就是$A\vec{v_i}$的长度。
+
+##### 2.1 奇异值的几何含义
+$\lambda_i$是$A^TA$的特征值，$\vec{v_i}$是$A^TA$的特征向量。 <font color=#FA8072>则A是列空间的一组正交基 $\quad \lambda_i \neq0$</font>
+
+<p>证明正交性：</p>
+<script type="math/tex; mode=display">(A\vec{v_i})\cdot(A\vec{v_j})=(Av_i)^T\cdot(Av_j)={v_i}^TA^TAv_j</script><script type="math/tex; mode=display">={v_i}^T(A^TAv_j)={v_i}^T(\lambda_jv_j)</script><script type="math/tex; mode=display">=\lambda_j{v_i}^Tv_j=\lambda_i(\vec{v_i} \cdot \vec{v_j})=0</script><p>证明{$A\vec{v_i}$}是A的列空间的一组基：</p>
+<blockquote>
+<p><a href="https://github.com/liuyubobobo/Play-with-Linear-Algebra" target="_blank" rel="noopener">参考链接-liuyubobobo</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>线性代数</category>
+      </categories>
+      <tags>
+        <tag>python</tag>
+        <tag>线性代数</tag>
+        <tag>SVD</tag>
       </tags>
   </entry>
 </search>

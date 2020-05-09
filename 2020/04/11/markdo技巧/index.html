@@ -1,260 +1,204 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 4.2.0">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
-  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+<html lang="en">
 
+<head>
+	<!-- hexo-inject:begin --><!-- hexo-inject:end --><meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		markdown技巧 | 
+	 
+	Huibixunchang
+	</title>
+	
+	<!-- keywords,description -->
+	 
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+  
+
+	
 <link rel="stylesheet" href="/css/main.css">
 
-<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Roboto Mono:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="/lib/pace/pace-theme-flash.min.css">
-  <script src="/lib/pace/pace.min.js"></script>
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"huibixunchang.com","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
-
-  <meta name="description" content="列表1 列表2a 子列表1b 子列表2 列表3   加虚线 百度  字体是斜线的 字体加粗 &lt;html&gt;&lt;\&gt;html  单行代码     import numpy     import pandas &amp;nbsp;  &#x2F;&#x2F;半角空格（英文）&amp;emsp;  &#x2F;&#x2F;全角空格（中文 引用文章  我的内容是引用  快捷键修改-截屏贴图 ctrl+1     import numpy">
-<meta property="og:type" content="article">
-<meta property="og:title" content="markdown技巧">
-<meta property="og:url" content="http://huibixunchang.com/2020/04/11/markdo%E6%8A%80%E5%B7%A7/index.html">
-<meta property="og:site_name" content="Huibixunchang">
-<meta property="og:description" content="列表1 列表2a 子列表1b 子列表2 列表3   加虚线 百度  字体是斜线的 字体加粗 &lt;html&gt;&lt;\&gt;html  单行代码     import numpy     import pandas &amp;nbsp;  &#x2F;&#x2F;半角空格（英文）&amp;emsp;  &#x2F;&#x2F;全角空格（中文 引用文章  我的内容是引用  快捷键修改-截屏贴图 ctrl+1     import numpy">
-<meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586689011634&di=53929a4a78d89053c469516a1dce3e9d&imgtype=0&src=http%253A%252F%252F05.imgmini.eastday.com%252Fmobile%252F20180614%252F20180614145417_254bb43ce08760f51dbe77178fa39e99_1.jpeg">
-<meta property="article:published_time" content="2020-04-11T15:22:03.000Z">
-<meta property="article:modified_time" content="2020-04-18T01:40:16.585Z">
-<meta property="article:author" content="Zhaohui Li">
-<meta property="article:tag" content="markdown语法">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586689011634&di=53929a4a78d89053c469516a1dce3e9d&imgtype=0&src=http%253A%252F%252F05.imgmini.eastday.com%252Fmobile%252F20180614%252F20180614145417_254bb43ce08760f51dbe77178fa39e99_1.jpeg">
-
-<link rel="canonical" href="http://huibixunchang.com/2020/04/11/markdo%E6%8A%80%E5%B7%A7/">
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
 
-  <title>markdown技巧 | Huibixunchang</title>
-  
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+<meta name="generator" content="Hexo 4.2.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+
+<body>
+	<!-- hexo-inject:begin --><!-- hexo-inject:end --><header id="header">
+    <a id="title" href="/" class="logo">Huibixunchang</a>
+
+	<ul id="menu">
+		<!-- <li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+		 -->
+		
+		<!-- <li class="menu-item">
+			<a href="https://github.com/wujun234/uid-generator-spring-boot-starter" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li> -->
+		<li class="menu-item">
+			<a href="https://blog.csdn.net/weixin_31948131" class="menu-item-link" target="_blank">
+				CSDN
+			</a>
+		</li>
+
+		<li class="menu-item">
+			<a href="https://github.com/huibixunchang/huibixunchang.github.io/" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
 
 
 
 
+	</ul>
+</header>
 
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="text" placeholder="search...">
+		<div id="tree">
+			
 
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/13/C++%E5%87%BD%E6%95%B0/">
+										C++函数
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/18/Flask%E7%AE%80%E6%98%93%E5%85%A5%E9%97%A8/">
+										Flask简易入门
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/20/JQuery-note/">
+										JQuery-note
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/11/hello-world/">
+										hello-world
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/2020/04/11/markdo%E6%8A%80%E5%B7%A7/">
+										markdo技巧
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/17/selenium%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
+										selenium基本使用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/2020/04/24/%E5%AF%B9%E7%A7%B0%E7%9F%A9%E9%98%B5%E5%8F%8ASVD%E5%88%86%E8%A7%A3/">
+										对称矩阵及SVD分解
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+		</div>
+	</div>
+</div>
 
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
 
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+	markdo技巧
+</h1>
+<div class="article-meta">
+	
+		<span>
+			阅读量:<span id="/2020/04/11/markdo%E6%8A%80%E5%B7%A7/" class="leancloud_visitors" data-flag-title="markdown技巧"></span>
+		</span>
+	
+	<span>Zhaohui Li</span>
+	<span>2020-04-11 23:22:03</span>
     
-
-    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
-    </div>
-  </div>
-
-  <div class="site-meta">
-
-    <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">Huibixunchang</h1>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-
-  <div class="site-nav-right">
-    <div class="toggle popup-trigger">
-        <i class="fa fa-search fa-fw fa-lg"></i>
-    </div>
-  </div>
-</div>
-
-
-
-
-<nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
-      <li class="menu-item menu-item-search">
-        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
-        </a>
-      </li>
-  </ul>
-</nav>
-
-
-
-  <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
-  <span class="search-icon">
-    <i class="fa fa-search"></i>
-  </span>
-  <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
-           placeholder="搜索..." spellcheck="false"
-           type="search" class="search-input">
-  </div>
-  <span class="popup-btn-close">
-    <i class="fa fa-times-circle"></i>
-  </span>
-</div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
-  </div>
-</div>
-
-    </div>
-  </div>
-
-</div>
-    </header>
-
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-
-          <div class="content post posts-expand">
+		<div id="article-categories">
             
-
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true"></i>
+                        <a href="/categories/markdown/">markdown</a>
+						
+                    </span>
+                
+            
+		</div>
     
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://huibixunchang.com/2020/04/11/markdo%E6%8A%80%E5%B7%A7/">
+</div>
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://tse2-mm.cn.bing.net/th?id=OIP.cpgIsFmbOe6KY1SBCQL6fAHaE2&pid=Api&rs=1">
-      <meta itemprop="name" content="Zhaohui Li">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Huibixunchang">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          markdown技巧
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2020-04-11 23:22:03" itemprop="dateCreated datePublished" datetime="2020-04-11T23:22:03+08:00">2020-04-11</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-04-18 09:40:16" itemprop="dateModified" datetime="2020-04-18T09:40:16+08:00">2020-04-18</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/markdown/" itemprop="url" rel="index"><span itemprop="name">markdown</span></a>
-                </span>
-            </span>
-
-          
-            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              <span class="post-meta-item-text">阅读次数：</span>
-              <span id="busuanzi_value_page_pv"></span>
-            </span>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-        <ul>
+<div id="article-content">
+	<ul>
 <li>列表1</li>
 <li>列表2<br>a 子列表1<br>b 子列表2</li>
 <li>列表3</li>
@@ -262,336 +206,144 @@
 <hr>
 <p>加虚线</p>
 <p><a href="www.baidu.com">百度</a></p>
-<p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586689011634&di=53929a4a78d89053c469516a1dce3e9d&imgtype=0&src=http%3A%2F%2F05.imgmini.eastday.com%2Fmobile%2F20180614%2F20180614145417_254bb43ce08760f51dbe77178fa39e99_1.jpeg" alt="picture"></p>
+<p><img src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1586689011634&amp;di=53929a4a78d89053c469516a1dce3e9d&amp;imgtype=0&amp;src=http%3A%2F%2F05.imgmini.eastday.com%2Fmobile%2F20180614%2F20180614145417_254bb43ce08760f51dbe77178fa39e99_1.jpeg" alt="picture"></p>
 <p><em>字体是斜线的</em></p>
 <p><strong>字体加粗</strong></p>
-<p><code>&lt;html&gt;&lt;\&gt;html</code>  单行代码</p>
-<pre class="line-numbers language-python"><code class="language-python">    <span class="token keyword">import</span> numpy
-    <span class="token keyword">import</span> pandas<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p><br /> </br>换行</p>
+<p><code>&lt;html&gt;&lt;\&gt;html</code>  <br />单行代码</p>
+<pre class=" language-lang-python"><code class="language-lang-python">    import numpy
+    import pandas
+</code></pre>
+<font color=Red size=4> size=4</font>
+
 <p>&nbsp;  //半角空格（英文）<br>&emsp;  //全角空格（中文</p>
 <p>引用文章</p>
 <blockquote>
 <p>我的内容是引用</p>
 </blockquote>
 <p>快捷键修改-截屏贴图 <code>ctrl+1</code></p>
-<pre class="line-numbers language-python"><code class="language-python">    <span class="token keyword">import</span> numpy
-    <span class="token keyword">import</span> pandas
-    <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<pre class=" language-lang-python"><code class="language-lang-python">    import numpy
+    import pandas
+    print()
+</code></pre>
+<blockquote>
+<p><a href="https://www.jianshu.com/p/e74eb43960a1" target="_blank" rel="noopener">Markdown数学公式语法</a></p>
+</blockquote>
+<p>$ 数学公式$  行内 不独占一行</p>
+<script type="math/tex; mode=display">数学公式  行间 独占一行</script><script type="math/tex; mode=display">
+\begin{aligned}
+a &= b + c \\
+  &= d + e + f + g \\
+  &= h + i
+\end{aligned}</script><!-- \end{equation}$$ -->
+</div>
 
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/2020/04/13/C++%E5%87%BD%E6%95%B0/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  C++函数
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/2020/04/11/hello-world/">
+                hello-world
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
     </div>
 
-    
-    
-    
-
-      <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/markdown%E8%AF%AD%E6%B3%95/" rel="tag"># markdown语法</a>
-          </div>
-
-        
 
 
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/2020/04/11/hello-world/" rel="prev" title="Hello World">
-      <i class="fa fa-chevron-left"></i> Hello World
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/2020/04/13/C++%E5%87%BD%E6%95%B0/" rel="next" title="C++常用函数">
-      C++常用函数 <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
+	<div id="vcomments"></div>
 
-
-
-          </div>
-          
 
 <script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: 'R0l1Q78y3gorIjE034Yl0CM7-gzGzoHsz',
+			appKey: 'vei1p95r3MqlJkQSACuvT0DC',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+    // 显示次数
+		function showTime(Counter) {
+			var query = new AV.Query("Counter");
+			if($(".leancloud_visitors").length > 0){
+				var url = $(".leancloud_visitors").attr('id').trim();
+				// where field
+				query.equalTo("words", url);
+				// count
+				query.count().then(function (number) {
+					// There are number instances of MyClass where words equals url.
+					$(document.getElementById(url)).text(number?  number : '--');
+				}, function (error) {
+					// error is an instance of AVError.
+				});
+			}
+		}
+		// 追加pv
+		function addCount(Counter) {
+			var url = $(".leancloud_visitors").length > 0 ? $(".leancloud_visitors").attr('id').trim() : 'wujun234.github.io';
+			var Counter = AV.Object.extend("Counter");
+			var query = new Counter;
+			query.save({
+				words: url
+			}).then(function (object) {
+			})
+		}
+		$(function () {
+			var Counter = AV.Object.extend("Counter");
+			addCount(Counter);
+			showTime(Counter);
+		});
+	
 </script>
+	</div>
+	<div id="footer">
+	<p>
+	©2020-<span id="footerYear"></span> 
+	<a href="/">Zhaohui Li</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			总访问
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			当前访问
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	<!-- Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a> -->
+	</p>
 
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
 
-  <aside class="sidebar">
-    <div class="sidebar-inner">
 
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
 
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="Zhaohui Li"
-      src="https://tse2-mm.cn.bing.net/th?id=OIP.cpgIsFmbOe6KY1SBCQL6fAHaE2&pid=Api&rs=1">
-  <p class="site-author-name" itemprop="name">Zhaohui Li</p>
-  <div class="site-description" itemprop="description"></div>
 </div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">6</span>
-          <span class="site-state-item-name">日志</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">5</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">8</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
-</div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/huibixunchang" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;huibixunchang" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="https://weibo.com/5243214123/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1" title="weibo → https:&#x2F;&#x2F;weibo.com&#x2F;5243214123&#x2F;profile?rightmod&#x3D;1&amp;wvr&#x3D;6&amp;mod&#x3D;personinfo&amp;is_all&#x3D;1" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>weibo</a>
-      </span>
-  </div>
-
-
-  <div class="links-of-blogroll motion-element">
-    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
-      Links
-    </div>
-    <ul class="links-of-blogroll-list">
-        <li class="links-of-blogroll-item">
-          <a href="https://www.geeksforgeeks.org/" title="https:&#x2F;&#x2F;www.geeksforgeeks.org&#x2F;" rel="noopener" target="_blank">GeeksforGeeks</a>
-        </li>
-        <li class="links-of-blogroll-item">
-          <a href="https://leetcode-cn.com/problemset/all/" title="https:&#x2F;&#x2F;leetcode-cn.com&#x2F;problemset&#x2F;all&#x2F;" rel="noopener" target="_blank">LeetCode</a>
-        </li>
-    </ul>
-  </div>
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
-
-<div class="copyright">
-  
-  &copy; 
-  <span itemprop="copyrightYear">2020</span>
-  <span class="with-love">
-    <i class="fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Zhaohui Li</span>
-</div>
-
-<!--
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
-  </div>-->
-
-        
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-user"></i>
-      </span>
-      <span class="site-uv" title="总访客量">
-        <span id="busuanzi_value_site_uv"></span>
-      </span>
-    </span>
-    <span class="post-meta-divider">|</span>
-    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
-      <span class="post-meta-item-icon">
-        <i class="fa fa-eye"></i>
-      </span>
-      <span class="site-pv" title="总访问量">
-        <span id="busuanzi_value_site_pv"></span>
-      </span>
-    </span>
-</div>
-
-
-
-
-
-
-
-
-      </div>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-
-
-
-  
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-  <style>
-    .copy-btn {
-      display: inline-block;
-      padding: 6px 12px;
-      font-size: 13px;
-      font-weight: 700;
-      line-height: 20px;
-      color: #333;
-      white-space: nowrap;
-      vertical-align: middle;
-      cursor: pointer;
-      background-color: #eee;
-      background-image: linear-gradient(#fcfcfc, #eee);
-      border: 1px solid #d5d5d5;
-      border-radius: 3px;
-      user-select: none;
-      outline: 0;
-    }
-
-    .highlight-wrap .copy-btn {
-      transition: opacity .3s ease-in-out;
-      opacity: 0;
-      padding: 2px 6px;
-      position: absolute;
-      right: 4px;
-      top: 8px;
-    }
-
-    .highlight-wrap:hover .copy-btn,
-    .highlight-wrap .copy-btn:focus {
-      opacity: 1
-    }
-
-    .highlight-wrap {
-      position: relative;
-    }
-  </style>
-  
-  <script>
-    $('.highlight').each(function (i, e) {
-      var $wrap = $('<div>').addClass('highlight-wrap')
-      $(e).after($wrap)
-      $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function (e) {
-        var code = $(this).parent().find('.code').find('.line').map(function (i, e) {
-          return $(e).text()
-        }).toArray().join('\n')
-        var ta = document.createElement('textarea')
-        document.body.appendChild(ta)
-        ta.style.position = 'absolute'
-        ta.style.top = '0px'
-        ta.style.left = '0px'
-        ta.value = code
-        ta.select()
-        ta.focus()
-        var result = document.execCommand('copy')
-        document.body.removeChild(ta)
-        
-          if(result)$(this).text('复制成功')
-          else $(this).text('复制失败')
-        
-        $(this).blur()
-      })).on('mouseleave', function (e) {
-        var $b = $(this).find('.copy-btn')
-        setTimeout(function () {
-          $b.text('复制')
-        }, 300)
-      }).append(e)
-    })
-  </script>
-
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button><!-- hexo-inject:begin --><!-- hexo-inject:end -->
 </body>
 </html>
