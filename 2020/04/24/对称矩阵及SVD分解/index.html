@@ -199,35 +199,15 @@
 
 <div id="article-content">
 	<h4 id="矩阵相似型"><a href="#矩阵相似型" class="headerlink" title="矩阵相似型"></a>矩阵相似型</h4><p>&emsp; &emsp; 如果矩阵A,B满足$A=P^{-1}BP$则称A和B相似。A和B的特征方程相同，特征值相同。&emsp; (类比相似三角形，矩阵的相似也是<font color=#FA8072>从不同的视角观察相同的内容。</font>)</p>
-<font color=#D2B48C size=2>假设P是一个坐标系，则A变换是在P坐标系下观察的B的变换（观察B变换在我们标准坐标系下，观察A变换在P坐标系下,A和B本质是同一变换，只是观察的坐标系不同）</font>
-
-
-
-
-
-<h4 id="1-对称矩阵"><a href="#1-对称矩阵" class="headerlink" title="1. 对称矩阵"></a>1. 对称矩阵</h4><p>&emsp; &emsp; <strong>(一) 对称矩阵的所有不同的特征值对应的特征向量互相垂直。</strong><br>&emsp;&emsp;假设矩阵A的两个特征向量$v_1,v_2$对应不同的特征值$\lambda_1, \lambda_2。$<br><br />证明<font color=Red> $ \qquad \vec{v_1} \cdot \vec{v_2} = 0 $ </font>  &emsp;&emsp;<font size=2>(向量之间的点乘，对应的因子相乘再相加)</font></p>
-<script type="math/tex; mode=display">\begin{aligned}
-(\lambda_1\vec{v_1})\cdot\vec{v_2} &= (\lambda_1\vec{v_1})^T\vec{v_2}=(Av_1)^T\vec{v_2}=v_1^TA^Tv_2=v_1^TAv_2 
-\\ &=v_1^T \lambda_2v_2=\lambda_2v_1^Tv_2=\lambda_2\vec{v_1}\vec{v_2}
-\end{aligned}</script><script type="math/tex; mode=display">(\lambda_1-\lambda_2)(\vec{v_1}\cdot\vec{v_2})=0</script><script type="math/tex; mode=display">\qquad \vec{v_1} \cdot \vec{v_2} = 0</script><h5 id="1-1-正交对角化"><a href="#1-1-正交对角化" class="headerlink" title="1.1 正交对角化"></a>1.1 正交对角化</h5><p>&emsp; &emsp;<strong>(二)对称矩阵一定可以被对角化 $\qquad A=PDP^{-1}$</strong><br>如果A是对称矩阵 $\qquad A=QDQ^{-1}$ &emsp;将每一个特征向量标准化 $\qquad A=QDQ^{T}$ &emsp;故进行了正交对角化</p>
-<font  color=Blue size=2>(标准正交矩阵的逆等于标准正交矩阵的转置)</font>
-&emsp; &emsp;A是对称矩阵 <---> A可以被正交对角化$\qquad A=QDQ^{T}$
-
-#### 2. 奇异值(Singular Value)
-若A是一个$m\ast n$的矩阵，则$ A^TA$是一个$n\ast n$的方针，且对称。<br />
-$A^TA$ 可以被正交对角化，拥有n个实数特征值$(\lambda_1,\lambda_2,...,\lambda_n)$；n个互相垂直的标准特征向量$(\vec{v_1},\vec{v_2},...,\vec{v_n})$。
-
-$${||A\vec{v_i}||}^2=(A\vec{v_i})\cdot(A\vec{v_i})={(A\vec{v_i})}^T\cdot(A\vec{v_i})={v_i}^TA^TAv_i$$
-$$={v_i}^T(A^TAv_i) ={v_i}^T(\lambda_i v_i) $$
-$$= \lambda_i {v_i}^Tv_i = \lambda_i{||\vec{v_i} ||}^2 = \lambda_i$$
-$ A^TA$的特征值>=0, 
-$$\sigma_i = \sqrt{\lambda_i}$$ $\sigma_i$称为奇异值，奇异值就是$A\vec{v_i}$的长度。
-
-##### 2.1 奇异值的几何含义
-$\lambda_i$是$A^TA$的特征值，$\vec{v_i}$是$A^TA$的特征向量。 <font color=#FA8072>则A是列空间的一组正交基 $\quad \lambda_i \neq0$</font>
-
-<p>证明正交性：</p>
-<script type="math/tex; mode=display">(A\vec{v_i})\cdot(A\vec{v_j})=(Av_i)^T\cdot(Av_j)={v_i}^TA^TAv_j</script><script type="math/tex; mode=display">={v_i}^T(A^TAv_j)={v_i}^T(\lambda_jv_j)</script><script type="math/tex; mode=display">=\lambda_j{v_i}^Tv_j=\lambda_i(\vec{v_i} \cdot \vec{v_j})=0</script><p>证明{$A\vec{v_i}$}是A的列空间的一组基：</p>
+<p><font color=#D2B48C size=2>假设P是一个坐标系，则A变换是在P坐标系下观察的B的变换（观察B变换在我们标准坐标系下，观察A变换在P坐标系下,A和B本质是同一变换，只是观察的坐标系不同）</font></p>
+<h4 id="1-对称矩阵"><a href="#1-对称矩阵" class="headerlink" title="1. 对称矩阵"></a>1. 对称矩阵</h4><p>&emsp; &emsp; <strong>(一) 对称矩阵的所有不同的特征值对应的特征向量互相垂直。</strong><br>&emsp;&emsp;假设矩阵A的两个特征向量$v_1,v_2$对应不同的特征值$\lambda_1, \lambda_2。$<br><br />证明<font color=Red> $ \qquad \vec{v_1} \cdot \vec{v_2} = 0 $ </font>  &emsp;&emsp;<font size=2>(向量之间的点乘，对应的因子相乘再相加)</font><br>$$ \begin{aligned}<br>(\lambda_1\vec{v_1})\cdot\vec{v_2} &amp;= (\lambda_1\vec{v_1})^T\vec{v_2}=(Av_1)^T\vec{v_2}=v_1^TA^Tv_2=v_1^TAv_2<br>\ &amp;=v_1^T \lambda_2v_2=\lambda_2v_1^Tv_2=\lambda_2\vec{v_1}\vec{v_2}<br>\end{aligned} $$</p>
+<p>$$ (\lambda_1-\lambda_2)(\vec{v_1}\cdot\vec{v_2})=0 $$<br>$$\qquad \vec{v_1} \cdot \vec{v_2} = 0$$</p>
+<h5 id="1-1-正交对角化"><a href="#1-1-正交对角化" class="headerlink" title="1.1 正交对角化"></a>1.1 正交对角化</h5><p>&emsp; &emsp;<strong>(二)对称矩阵一定可以被对角化 $\qquad A=PDP^{-1}$</strong><br>如果A是对称矩阵 $\qquad A=QDQ^{-1}$ &emsp;将每一个特征向量标准化 $\qquad A=QDQ^{T}$ &emsp;故进行了正交对角化<br><font  color=Blue size=2>(标准正交矩阵的逆等于标准正交矩阵的转置)</font><br>&emsp; &emsp;A是对称矩阵 &lt;—&gt; A可以被正交对角化$\qquad A=QDQ^{T}$</p>
+<h4 id="2-奇异值-Singular-Value"><a href="#2-奇异值-Singular-Value" class="headerlink" title="2. 奇异值(Singular Value)"></a>2. 奇异值(Singular Value)</h4><p>若A是一个$m\ast n$的矩阵，则$ A^TA$是一个$n\ast n$的方针，且对称。<br /><br>$A^TA$ 可以被正交对角化，拥有n个实数特征值$(\lambda_1,\lambda_2,…,\lambda_n)$；n个互相垂直的标准特征向量$(\vec{v_1},\vec{v_2},…,\vec{v_n})$。</p>
+<p>$${||A\vec{v_i}||}^2=(A\vec{v_i})\cdot(A\vec{v_i})={(A\vec{v_i})}^T\cdot(A\vec{v_i})={v_i}^TA^TAv_i$$<br>$$={v_i}^T(A^TAv_i) ={v_i}^T(\lambda_i v_i) $$<br>$$= \lambda_i {v_i}^Tv_i = \lambda_i{||\vec{v_i} ||}^2 = \lambda_i$$<br>$ A^TA$的特征值&gt;=0,<br>$$\sigma_i = \sqrt{\lambda_i}$$ $\sigma_i$称为奇异值，奇异值就是$A\vec{v_i}$的长度。</p>
+<h5 id="2-1-奇异值的几何含义"><a href="#2-1-奇异值的几何含义" class="headerlink" title="2.1 奇异值的几何含义"></a>2.1 奇异值的几何含义</h5><p>$\lambda_i$是$A^TA$的特征值，$\vec{v_i}$是$A^TA$的特征向量。 <font color=#FA8072>则A是列空间的一组正交基 $\quad \lambda_i \neq0$</font></p>
+<p>证明正交性：<br>$$(A\vec{v_i})\cdot(A\vec{v_j})=(Av_i)^T\cdot(Av_j)={v_i}^TA^TAv_j$$<br>$$={v_i}^T(A^TAv_j)={v_i}^T(\lambda_jv_j)$$<br>$$=\lambda_j{v_i}^Tv_j=\lambda_i(\vec{v_i} \cdot \vec{v_j})=0$$</p>
+<p>证明{$A\vec{v_i}$}是A的列空间的一组基：</p>
 <blockquote>
 <p><a href="https://github.com/liuyubobobo/Play-with-Linear-Algebra" target="_blank" rel="noopener">参考链接-liuyubobobo</a></p>
 </blockquote>

@@ -202,15 +202,13 @@
 <li><p>创建一个web应用程序<br> <code>app = Falsk(__name__)</code></p>
 </li>
 <li><p>启用程序程序 -&gt; 启动 -&gt; 启动一个flask项目</p>
-<pre class=" language-lang-python"><code class="language-lang-python">if __name__ == '__mian__':   #程序入口
- app.run()
-</code></pre>
+<pre class=" language-python"><code class="language-python"><span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__mian__'</span><span class="token punctuation">:</span>   <span class="token comment" spellcheck="true">#程序入口</span>
+ app<span class="token punctuation">.</span>run<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
 </li>
 <li><p>前端页面发送请求，用一个函数来处理浏览器发送过来的请求</p>
-<pre class=" language-lang-python"><code class="language-lang-python">@app.route("/")  #当访问到127.0.0.1：5000/
-def func():
- return "hello world"
-</code></pre>
+<pre class=" language-python"><code class="language-python">@app<span class="token punctuation">.</span>route<span class="token punctuation">(</span><span class="token string">"/"</span><span class="token punctuation">)</span>  <span class="token comment" spellcheck="true">#当访问到127.0.0.1：5000/</span>
+<span class="token keyword">def</span> <span class="token function">func</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+ <span class="token keyword">return</span> <span class="token string">"hello world"</span></code></pre>
 </li>
 </ol>
 
